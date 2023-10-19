@@ -1,8 +1,7 @@
 // Herança
+// O código está com erro mais serve para entender o conceito 
 
-/using System;
-
-class Program{
+using System;
 
 	class Veiculo{ // Classe Base
     public int wheels;
@@ -13,6 +12,13 @@ class Program{
     }
     public void desligar(){
       active=false;
+    }
+    public string getLigado(){
+      if(active){
+        return "sim";
+      }else{
+        return "não";
+      }
     }
   }
   class Carro:Veiculo{ // Derivada|Base
@@ -29,11 +35,13 @@ class Program{
 
   static void Main(){
 	
-  Carro void Main(){
-    Carro c1=new Carro("Fast","red");
+    Carro void Main(){
+      Carro c1=new Carro("Fast","red");
 
-    Console.WriteLine("Cor...:{0}")
+      Console.WriteLine("Cor.......:{0}",c1.color);
+      Console.WriteLine("Noma......:{0}",c1.name);
+      Console.WriteLine("Rodas.....:{0}",c1.wheels);
+      Console.WriteLine("Vel.Maxima:{0}",c1.velMax);
+      Console.WriteLine("Ligado....:{0}",c1.getLigado());
+    }
   }
-	
-	}
-}
