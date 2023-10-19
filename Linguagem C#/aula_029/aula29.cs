@@ -14,6 +14,10 @@ class Program{
 			alive=true;
 			nome=n;
 		}
+		// Abaixo temos um destrutor que deve ser sempre precedido pelo sinal (~);
+		~Jogador(){
+			Console.WriteLine("Jogador {0} foi destruído",nome);
+		}
 	}
 
 	static void Main(){
