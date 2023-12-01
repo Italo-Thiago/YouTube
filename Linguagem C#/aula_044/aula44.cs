@@ -6,10 +6,17 @@ struct Car{
   public string brand;
   public string model;
   public string color;
+
   public Car(string brand,string model,string color){
     this.brand=brand;
     this.model=model;
     this.color=color;
+  }
+
+  public void info(){
+    Console.WriteLine("Marca.: {0}",this.brand);
+    Console.WriteLine("Modelo: {0}",this.model);
+    Console.WriteLine("Cor...: {0}",this.color);
   }
 }
 
@@ -17,17 +24,10 @@ class Program{
 
 	static void Main(){
 	
-    Car c1;
+	  Car c1=new Car("Honda","HRV","Prata");
+	  Car c2=new Car("VW","Golf","Azul");
 
-    c1.brand="VW";
-    c1.model="Golf";
-    c1.color="Azul";
-//
-    Car c2; 
-
-    Console.WriteLine("Marca....:{0}",c1.brand);
-    Console.WriteLine("Modelo...:{0}",c1.model);
-    Console.WriteLine("Cor......:{0}",c1.color);
-	
+	  c1.info();
+	  c2.info();
 	}
 }
